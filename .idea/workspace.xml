@@ -10,39 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3c0d78a-08c0-4cbe-b8e2-270820c407cb" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ChannelController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/beanTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/AudioChannel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/Conversation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/SubChannel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ChannelController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/MessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ServerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/ChannelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/ChannelDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/MessageDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/MessageDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/ServerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/ServerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Channel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/Channel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/ChannelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/ChannelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/ChannelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/ChannelServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/MessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/MessageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/ServerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/ServerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/ServerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/ServerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc-config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ChannelMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ChannelMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/MessageMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/MessageMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ServerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ServerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/Channel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/TextChannel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,6 +206,8 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.DiscordLikeApplication" />
+        <item itemvalue="JUnit.beanTest.testController" />
         <item itemvalue="JUnit.beanTest.testController" />
         <item itemvalue="Spring Boot.DiscordLikeApplication" />
       </list>

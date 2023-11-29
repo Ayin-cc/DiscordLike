@@ -5,52 +5,52 @@ import org.springframework.stereotype.Component;
 import java.time.LocalDateTime;
 
 @Component
-public class Message {
-    private int id;
-    private User sender;
+public class Conversation {
+    private int fromId;
+    private int toId;
     private String content;
     private LocalDateTime time;
 
-    public Message() {
+    public Conversation() {
     }
 
-    public Message(int id, User sender, String content, LocalDateTime time) {
-        this.id = id;
-        this.sender = sender;
+    public Conversation(int fromId, int toId, String content, LocalDateTime time) {
+        this.fromId = fromId;
+        this.toId = toId;
         this.content = content;
         this.time = time;
     }
 
     /**
      * 获取
-     * @return id
+     * @return fromId
      */
-    public int getId() {
-        return id;
+    public int getFromId() {
+        return fromId;
     }
 
     /**
      * 设置
-     * @param id
+     * @param fromId
      */
-    public void setId(int id) {
-        this.id = id;
+    public void setFromId(int fromId) {
+        this.fromId = fromId;
     }
 
     /**
      * 获取
-     * @return sender
+     * @return toId
      */
-    public User getSender() {
-        return sender;
+    public int getToId() {
+        return toId;
     }
 
     /**
      * 设置
-     * @param sender
+     * @param toId
      */
-    public void setSender(User sender) {
-        this.sender = sender;
+    public void setToId(int toId) {
+        this.toId = toId;
     }
 
     /**
@@ -87,6 +87,6 @@ public class Message {
 
     @Override
     public String toString() {
-        return "Message{id = " + id + ", sender = " + sender + ", content = " + content + ", time = " + time + "}";
+        return "Conversation{fromId = " + fromId + ", toId = " + toId + ", content = " + content + ", time = " + time + "}";
     }
 }
