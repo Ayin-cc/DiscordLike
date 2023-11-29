@@ -1,4 +1,4 @@
-package controller;
+package com.discordLike.controller;
 
 import org.springframework.stereotype.Controller;
 

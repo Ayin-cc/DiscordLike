@@ -1,4 +1,4 @@
-package entity;
+package com.discordLike.entity;
 
 import org.springframework.stereotype.Component;
 

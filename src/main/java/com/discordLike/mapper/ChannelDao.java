@@ -1,4 +1,4 @@
-package dao;
+package com.discordLike.mapper;
 
 import org.springframework.stereotype.Repository;
 
