@@ -3,5 +3,5 @@ package com.discordLike.mapper;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ChannelDao {
+public interface TextChannelDao {
 }

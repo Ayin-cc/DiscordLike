@@ -1,0 +1,40 @@
+a{
+text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("../resources/index.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.buttons {
+    text-align: center;
+}
+.btn {
+    padding: 10px 20px;
+    margin: 40px;
+    font-size: 32px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+}
+.login {
+    background-color: #00BCD4;
+}
+.register {
+    background-color: #3cb371;
+}
+.login:hover{
+    background-color: #0097A7;
+}
+.register:hover{
+    background-color: #388E3C;
+}
+

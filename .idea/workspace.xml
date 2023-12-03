@@ -10,14 +10,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3c0d78a-08c0-4cbe-b8e2-270820c407cb" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/AudioChannel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/Conversation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/SubChannel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/css/register.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/html/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/html/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/html/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/js/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/js/register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/AudioChannelDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/ConversationDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/SubChannelDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/AudioChannelMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/ConversationMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/SubChannelMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/Channel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/TextChannel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/ChannelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/TextChannelDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ChannelMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TextChannelDao.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +36,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="spring-beans.schema" />
         <option value="Class" />
+        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -59,28 +71,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;工件&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15722656&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;3b1c9c1974c0ef3b3ad01515d8a28dc9&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "17",
+    "list.type.of.created.stylesheet": "CSS",
+    "project.structure.last.edited": "工件",
+    "project.structure.proportion": "0.15722656",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "3b1c9c1974c0ef3b3ad01515d8a28dc9"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="service" />
@@ -232,6 +247,7 @@
       <workItem from="1701145746018" duration="2309000" />
       <workItem from="1701148276338" duration="1204000" />
       <workItem from="1701236763566" duration="5171000" />
+      <workItem from="1701587829114" duration="4798000" />
     </task>
     <task id="LOCAL-00001" summary="创建项目">
       <created>1700731203157</created>
@@ -254,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701074543212</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Entity Bean">
+      <created>1701244328667</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701244328667</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,7 +298,8 @@
     <MESSAGE value="创建项目" />
     <MESSAGE value="建立基本架构以及配置文件" />
     <MESSAGE value="Dao层基础代码以及mapper文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dao层基础代码以及mapper文件" />
+    <MESSAGE value="Entity Bean" />
+    <option name="LAST_COMMIT_MESSAGE" value="Entity Bean" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

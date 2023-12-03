@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="../css/register.css"/>
+</head>
+<body>
+<div class="login-container">
+    <h2>注册</h2>
+    <form>
+        <div class="input-group">
+            <label for="username">用户名</label>
+            <input type="text" id="username" name="username" placeholder="只能包含数字、字母、下划线">
+        </div>
+        <div class="input-group">
+            <label for="password">邮箱</label>
+            <input type="password" id="email" name="password" placeholder="请输入邮箱">
+        </div>
+        <button class="btn auth">获取验证码</button>
+        <div class="input-group">
+            <label for="password">验证码</label>
+            <input type="password" id="auth code" name="password" placeholder="请输入收到的验证码">
+        </div>
+        <div class="input-group">
+            <label for="password">密码</label>
+            <input type="password" id="password" name="password" placeholder="8-16位 a-z 0-9 ._@#">
+        </div>
+        <div class="input-group">
+            <label for="password">确认密码</label>
+            <input type="password" id="confirm-password" name="password" placeholder="请再次输入密码">
+        </div>
+        <div class="btn-container">
+            <button type="submit">注册</button>
+            <a class="btn" href="../index.html">返回</a>
+        </div>
+    </form>
+</div>
+</body>
+</html>
