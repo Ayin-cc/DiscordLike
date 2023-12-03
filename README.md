@@ -1,6 +1,6 @@
 ## 项目分析
 
-<img src="D:\文档\visio\png\Discord Like.png" style="zoom:50%;" />
+<img src="./images/project.png" />
 
 
 
