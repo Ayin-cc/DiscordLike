@@ -1,7 +1,9 @@
 package com.discordLike.mapper;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserDao {
+@Mapper
+public interface AudioChannelMapper {
 }

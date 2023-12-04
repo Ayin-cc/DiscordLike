@@ -10,12 +10,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3c0d78a-08c0-4cbe-b8e2-270820c407cb" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/ConversationMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/SubChannelMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/css/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/css/register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/html/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/html/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/html/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ChannelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ChannelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/MessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ServerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/AudioChannelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/AudioChannelMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/ConversationDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/MessageDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/MessageMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/ServerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/ServerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/SubChannelDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/TextChannelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/TextChannelMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/UserDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AudioChannelMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AudioChannelMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ConversationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ConversationMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/MessageMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/MessageMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ServerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ServerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SubChannelMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SubChannelMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TextChannelDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TextChannelMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/beanTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BeanTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseLocalColorSettings">
+    <colors>
+      <entry key="10db2e6e-eef7-4654-8fae-37963ee6ddb4" value="Blue" />
+    </colors>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -46,6 +83,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2YZRMNPjWdaxrxGTfhRVYXprkIf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -92,13 +132,26 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.beanTest.testController">
+  <component name="RunManager" selected="Spring Boot.Application">
     <configuration name="beanTest.testController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DiscordLike" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="beanTest" />
       <option name="METHOD_NAME" value="testController" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="DiscordLike" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.discordLike.Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.discordLike.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -200,11 +253,13 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.beanTest.testController" />
+      <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Spring Boot.DiscordLikeApplication" />
       <item itemvalue="Tomcat 服务器.Tomcat 9.0.30" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.Application" />
         <item itemvalue="Spring Boot.DiscordLikeApplication" />
         <item itemvalue="JUnit.beanTest.testController" />
         <item itemvalue="JUnit.beanTest.testController" />
@@ -232,6 +287,9 @@
       <workItem from="1701148276338" duration="1204000" />
       <workItem from="1701236763566" duration="5171000" />
       <workItem from="1701587829114" duration="4798000" />
+      <workItem from="1701651897132" duration="741000" />
+      <workItem from="1701660106368" duration="3435000" />
+      <workItem from="1701668180743" duration="3095000" />
     </task>
     <task id="LOCAL-00001" summary="创建项目">
       <created>1700731203157</created>
@@ -261,7 +319,42 @@
       <option name="project" value="LOCAL" />
       <updated>1701244328667</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Create README">
+      <created>1701594519421</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701594519421</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Create README">
+      <created>1701594546704</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701594546704</updated>
+    </task>
+    <task id="LOCAL-00007" summary="查漏补缺">
+      <created>1701594654530</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701594654530</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Update README.md">
+      <created>1701595774523</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701595774523</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Update README.md">
+      <created>1701595812708</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701595812708</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +371,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="origin/dev" />
                       </list>
                     </value>
                   </entry>
@@ -295,7 +388,10 @@
     <MESSAGE value="建立基本架构以及配置文件" />
     <MESSAGE value="Dao层基础代码以及mapper文件" />
     <MESSAGE value="Entity Bean" />
-    <option name="LAST_COMMIT_MESSAGE" value="Entity Bean" />
+    <MESSAGE value="Create README" />
+    <MESSAGE value="查漏补缺" />
+    <MESSAGE value="Update README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update README.md" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

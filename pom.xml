@@ -41,7 +41,7 @@
         <!-- 数据源 -->
         <dependency>
             <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
+            <artifactId>druid-spring-boot-starter</artifactId>
             <version>1.2.16</version>
         </dependency>
 
@@ -54,7 +54,7 @@
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>2.2.0</version>
+            <version>3.0.2</version>
         </dependency>
 
         <!-- MySQL Connector -->

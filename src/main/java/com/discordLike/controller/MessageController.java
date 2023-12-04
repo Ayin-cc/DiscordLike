@@ -1,7 +1,10 @@
 package com.discordLike.controller;
 
-import org.springframework.stereotype.Controller;
 
-@Controller
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/message")
 public class MessageController {
 }
