@@ -10,7 +10,7 @@
 - 服务器环境：阿里云轻量云服务，2核4G，Alibaba Cloud Linux
 - 部署应用：Tomcat 9.0.30
 - 开发模式：前后端分离
-- API文档：[API List](./API List.md)
+- API文档：[API List](https://github.com/Ayin-cc/DiscordLike/blob/dev/API%20List.md)
 - 前端：HTML + CSS + JS + jquery
 - 后端：Java Spring Boot + MyBatis
 - JDK版本：17
