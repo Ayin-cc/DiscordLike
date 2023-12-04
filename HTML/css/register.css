@@ -78,3 +78,6 @@ body {
     margin-bottom: 23px;
     margin-left: 270px;
 }
+.auth:hover{
+    background-color: #388E3C;
+}
