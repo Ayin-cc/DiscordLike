@@ -1,22 +1,27 @@
-function validateLogin(username, password, user) {
+function validateLogin(account, password, user) {
+    if(account === ''){
+        alert('账号不能为空');
+        return false;
+    }
+
     // 判断账号类型
-    if (/^\d+$/.test(username)) {
+    if (/^\d+$/.test(account)) {
         // id
-        user.id = parseInt(username);
+        user.id = parseInt(account);
         user.name = null;
         user.email = null;
     }
-    else if (/^[A-Za-z0-9_]+$/.test(username) && username.indexOf('@') === -1) {
+    else if (/^[A-Za-z0-9_]+$/.test(account) && username.indexOf('@') === -1) {
         // username
         user.id = null;
-        user.name = username;
+        user.name = account;
         user.email = null;
     }
-    else if (/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(username)) {
+    else if (/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(account)) {
         // email
         user.id = null;
         user.name = null;
-        user.email = username;
+        user.email = account;
     }
     else {
         alert('账号格式错误');
@@ -40,18 +45,13 @@ $(document).ready(function (){
         "email" : null,
         "passwd" : null
     }
-    var url;
-
-    fetch("../config.json").then(data => {
-        url = data.url;
-    });
 
     $('#login').click(function (event){
         event.preventDefault();
 
-        var username = $('#username').val();
+        var account = $('#account').val();
         var password = $('#password').val();
-        if (validateLogin(username, password, user)) {
+        if (validateLogin(account, password, user)) {
             $.ajax({
                 type: "POST",
                 dataType: "json",

@@ -11,9 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d3c0d78a-08c0-4cbe-b8e2-270820c407cb" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ChannelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ChannelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/MessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ServerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/html/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/js/login.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,7 +261,7 @@
       <workItem from="1701660106368" duration="3435000" />
       <workItem from="1701668180743" duration="4074000" />
       <workItem from="1701781869546" duration="4560000" />
-      <workItem from="1701842423183" duration="1469000" />
+      <workItem from="1701842423183" duration="1709000" />
     </task>
     <task id="LOCAL-00001" summary="创建项目">
       <created>1700731203157</created>
@@ -362,7 +361,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701843865663</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="支持跨域访问(dev测试)">
+      <created>1701843925014</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1701843925014</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,7 +414,8 @@
     <MESSAGE value="前端界面修改" />
     <MESSAGE value="前端登录功能实现" />
     <MESSAGE value="修复登录bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复登录bug" />
+    <MESSAGE value="支持跨域访问(dev测试)" />
+    <option name="LAST_COMMIT_MESSAGE" value="支持跨域访问(dev测试)" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
