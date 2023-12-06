@@ -6,12 +6,10 @@ import com.discordLike.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin(value = "*")
 @RequestMapping("/user")
 public class UserController {
     @Autowired
@@ -20,7 +18,12 @@ public class UserController {
     // 登录接口
     @RequestMapping("/login")
     public ResponseEntity<Integer> login(@RequestBody User user){
-        int id = userService.checkUser(user);
+        int id;
+        try{
+            id = userService.checkUser(user);
+        }catch (Exception e){
+            id = 0;
+        }
         if(id == 0){
             return new ResponseEntity<>(404, HttpStatus.NOT_FOUND);
         }
@@ -28,7 +31,7 @@ public class UserController {
             return new ResponseEntity<>(200, HttpStatus.OK);
         }
         else{
-            return new ResponseEntity<>(401, HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(401, HttpStatus.UNAUTHORIZED);
         }
     }
 

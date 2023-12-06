@@ -14,7 +14,7 @@ public class UserServiceImpl implements UserService {
     public int checkUser(User user){
         int ret = 0;
         if(user.getId() != 0){
-            ret = userMapper.checkUser(Integer.toString(user.getId()));
+            ret = userMapper.checkUser(user.getId());
         }
         else if(user.getName() != null){
             ret = userMapper.checkUser(user.getName());

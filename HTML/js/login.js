@@ -2,14 +2,20 @@ function validateLogin(username, password, user) {
     // 判断账号类型
     if (/^\d+$/.test(username)) {
         // id
-        user.id = username;
+        user.id = parseInt(username);
+        user.name = null;
+        user.email = null;
     }
     else if (/^[A-Za-z0-9_]+$/.test(username) && username.indexOf('@') === -1) {
         // username
-        user.username = username;
+        user.id = null;
+        user.name = username;
+        user.email = null;
     }
     else if (/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(username)) {
         // email
+        user.id = null;
+        user.name = null;
         user.email = username;
     }
     else {
@@ -22,17 +28,17 @@ function validateLogin(username, password, user) {
         alert('密码不能为空');
         return false;
     }
-    user.password = password;
+    user.passwd = password;
 
     return true;
 }
 
 $(document).ready(function (){
-    var user = {
+    let user = {
         "id" : 0,
-        "username" : null,
+        "name" : null,
         "email" : null,
-        "password" : null
+        "passwd" : null
     }
     var url;
 
@@ -51,7 +57,7 @@ $(document).ready(function (){
                 dataType: "json",
                 url: "http://127.0.0.1:8080/DiscordLike/user/login",
                 contentType: "application/json",
-                data: user,
+                data: JSON.stringify(user),
                 success: function (result){
                     alert("登录成功!");
                 },

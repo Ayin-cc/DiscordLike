@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 @Mapper
 public interface UserMapper {
+    int checkUser(@Param("id")int id);
     int checkUser(@Param("id")String id);
     int checkPasswd(@Param("id")int id, @Param("passwd")String passwd);
 }
