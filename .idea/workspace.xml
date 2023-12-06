@@ -11,11 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d3c0d78a-08c0-4cbe-b8e2-270820c407cb" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ChannelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ChannelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/MessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ServerController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,7 +262,7 @@
       <workItem from="1701660106368" duration="3435000" />
       <workItem from="1701668180743" duration="4074000" />
       <workItem from="1701781869546" duration="4560000" />
-      <workItem from="1701842423183" duration="1347000" />
+      <workItem from="1701842423183" duration="1469000" />
     </task>
     <task id="LOCAL-00001" summary="创建项目">
       <created>1700731203157</created>
@@ -357,7 +355,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701786375932</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="修复登录bug">
+      <created>1701843865663</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1701843865663</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,7 +407,8 @@
     <MESSAGE value="实现登录功能的接口" />
     <MESSAGE value="前端界面修改" />
     <MESSAGE value="前端登录功能实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="前端登录功能实现" />
+    <MESSAGE value="修复登录bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复登录bug" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
