@@ -1,0 +1,36 @@
+/* 全局样式 */
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.sidebar {
+    width: 180px;
+    height: 100%;
+    flex-grow: 1;
+    background: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    float: left;
+    flex-direction: column;
+}
+
+.profile {
+    margin-bottom: 20px;
+}
+
+.create-channel {
+    margin-top: 20px;
+}
+
+iframe{
+    width: 90vw;
+    height: 100%;
+}

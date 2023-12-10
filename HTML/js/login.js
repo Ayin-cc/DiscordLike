@@ -11,7 +11,7 @@ function validateLogin(account, password, user) {
         user.name = null;
         user.email = null;
     }
-    else if (/^[A-Za-z0-9_]+$/.test(account) && username.indexOf('@') === -1) {
+    else if (/^[A-Za-z0-9_]+$/.test(account) && account.indexOf('@') === -1) {
         // username
         user.id = null;
         user.name = account;
@@ -51,6 +51,7 @@ $(document).ready(function (){
 
         var account = $('#account').val();
         var password = $('#password').val();
+
         if (validateLogin(account, password, user)) {
             $.ajax({
                 type: "POST",

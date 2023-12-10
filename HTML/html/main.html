@@ -2,9 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>主页</title>
+    <title>主页面</title>
+    <link rel="stylesheet" href="../css/main.css"/>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/main.js"></script>
 </head>
 <body>
+<div class="container">
+    <div class="sidebar" id="sidebar">
+        <a href="#" id="profileLink" class="profile">个人信息</a>
+        <a href="#" id="channel1">频道1</a>
+        <a href="#" id="channel2">频道2</a>
+        <a href="#" id="createChannel" class="create-channel">创建频道</a>
+    </div>
+    <div class="main-content" id="mainContent">
+        <!-- 初始显示登录页面 -->
+        <iframe src="login.html"></iframe>
+    </div>
+</div>
 
+<script>
+    // 模拟登录状态
+    var isLoggedIn = false;
+
+    // 检测登录状态
+    function checkLoginStatus() {
+        if (!isLoggedIn) {
+            // 未登录状态，将侧边栏导航置为灰色不可点击
+            var sidebarLinks = document.querySelectorAll('.sidebar a');
+            sidebarLinks.forEach(function(link) {
+                link.classList.add('disabled');
+            });
+        } else {
+            // 登录状态，展示个人信息和创建频道按钮
+            document.getElementById('profileLink').innerText = '用户名';
+            document.getElementById('profileLink').href = 'profile.html';
+            document.getElementById('createChannel').style.display = 'block';
+        }
+    }
+
+    // 模拟登录成功后的操作
+    function loginSuccess() {
+        isLoggedIn = true;
+        checkLoginStatus();
+        // 假设登录成功后执行其他逻辑，例如加载用户信息
+    }
+
+    // 在页面加载完成后检测登录状态
+    window.onload = function() {
+        checkLoginStatus();
+    };
+</script>
 </body>
 </html>

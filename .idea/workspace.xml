@@ -10,9 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3c0d78a-08c0-4cbe-b8e2-270820c407cb" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/HTML/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/html/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/html/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/js/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/html/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/html/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/html/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,7 +267,9 @@
       <workItem from="1701660106368" duration="3435000" />
       <workItem from="1701668180743" duration="4074000" />
       <workItem from="1701781869546" duration="4560000" />
-      <workItem from="1701842423183" duration="5521000" />
+      <workItem from="1701842423183" duration="7691000" />
+      <workItem from="1702197809498" duration="591000" />
+      <workItem from="1702198502973" duration="1365000" />
     </task>
     <task id="LOCAL-00001" summary="创建项目">
       <created>1700731203157</created>
@@ -375,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701844247734</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="注册功能前端">
+      <created>1701849070178</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1701849070178</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,7 +438,8 @@
     <MESSAGE value="修复登录bug" />
     <MESSAGE value="支持跨域访问(dev测试)" />
     <MESSAGE value="前端登录提示优化" />
-    <option name="LAST_COMMIT_MESSAGE" value="前端登录提示优化" />
+    <MESSAGE value="注册功能前端" />
+    <option name="LAST_COMMIT_MESSAGE" value="注册功能前端" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
