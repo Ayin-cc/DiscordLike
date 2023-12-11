@@ -60,7 +60,14 @@ $(document).ready(function (){
                 contentType: "application/json",
                 data: JSON.stringify(user),
                 success: function (result){
+                    sessionStorage.setItem("login", true);
                     alert("登录成功!");
+                    // 检查是否在iframe中
+                    if (window.self !== window.top) {
+                        window.parent.document.getElementById('show-page').src = '../html/user.html';
+                    } else {
+                        window.location.href = '../html/main.html';
+                    }
                 },
                 error: function (jqXHR){
                     var code = jqXHR.status;
