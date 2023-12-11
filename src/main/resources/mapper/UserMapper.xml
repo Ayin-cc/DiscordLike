@@ -7,7 +7,6 @@
     <resultMap id="userRS" type="com.discordLike.entity.User">
 
     </resultMap>
-
     <!-- 判断用户是否存在 -->
     <select id="checkUser" resultType="int">
         select user.id from user
@@ -19,5 +18,12 @@
         where id = #{id} and user_passwd = #{passwd};
     </select>
 
+    <select id="getLastId" resultType="int">
+        select last_insert_id();
+    </select>
 
+    <insert id="addUser">
+        insert into user(user_name, user_passwd, user_email)
+        values (#{user.name}, #{user.passwd}, #{user.email});
+    </insert>
 </mapper>

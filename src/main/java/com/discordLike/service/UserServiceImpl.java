@@ -32,4 +32,18 @@ public class UserServiceImpl implements UserService {
         }
         return false;
     }
+
+    @Override
+    public int register(User user){
+        userMapper.addUser(user);
+        try{
+            return userMapper.getLastId();
+        }catch (Exception e){
+            return -1;
+        }
+    }
+
+    public boolean checkAuth(String authCode){
+        return true;
+    }
 }

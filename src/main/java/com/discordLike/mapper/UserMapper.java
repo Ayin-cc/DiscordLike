@@ -11,4 +11,6 @@ public interface UserMapper {
     int checkUser(@Param("id")int id);
     int checkUser(@Param("id")String id);
     int checkPasswd(@Param("id")int id, @Param("passwd")String passwd);
+    int getLastId();
+    void addUser(@Param("user")User user);
 }

@@ -64,10 +64,10 @@ $(document).ready(function (){
                 },
                 error: function (jqXHR){
                     var code = jqXHR.status;
-                    if(code == 401){
+                    if(code === 401){
                         alert("密码错误!");
                     }
-                    else if(code == 404){
+                    else if(code === 404){
                         alert("用户不存在!");
                     }
                     else{

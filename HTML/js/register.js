@@ -126,6 +126,9 @@ $(document).ready(function (){
             alert("验证码不能为空");
             return;
         }
+        user.name = username;
+        user.email = email;
+        user.passwd = password;
         $.ajax({
             type: "POST",
             dataType: "json",
@@ -136,7 +139,19 @@ $(document).ready(function (){
                 window.location.href = '../html/main.html';
             },
             error: function (jqXHR){
-                alert('注册失败');
+                var code = jqXHR.status;
+                if(code === 409){
+                    alert("用户名或邮箱已被注册");
+                }
+                else if(code === 401){
+                    alert("验证码错误");
+                }
+                else if(code === 400){
+                    alert("请求异常");
+                }
+                else{
+                    alert("网络连接错误");
+                }
             }
         })
     });
