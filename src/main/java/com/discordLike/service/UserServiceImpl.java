@@ -43,6 +43,16 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    @Override
+    public User getUser(int id){
+        return userMapper.getUser(id);
+    }
+
+    @Override
+    public User getUser(String usernameOrEmail){
+        return userMapper.getUser(usernameOrEmail);
+    }
+
     public boolean checkAuth(String authCode){
         return true;
     }

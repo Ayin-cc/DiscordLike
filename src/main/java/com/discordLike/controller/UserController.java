@@ -17,7 +17,7 @@ public class UserController {
 
     // 登录接口
     @RequestMapping("/login")
-    public ResponseEntity<Integer> login(@RequestBody User user){
+    public ResponseEntity<User> login(@RequestBody User user){
         int id;
         try{
             // 尝试检查用户是否已存在
@@ -27,15 +27,16 @@ public class UserController {
         }
         if(id == -1){
             // 用户不存在
-            return new ResponseEntity<>(404, HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
         if(userService.login(id, user.getPasswd())){
             // 登录成功
-            return new ResponseEntity<>(200, HttpStatus.OK);
+            User ret = userService.getUser(id);
+            return new ResponseEntity<>(ret, HttpStatus.OK);
         }
         else{
             // 密码错误
-            return new ResponseEntity<>(401, HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<>(null, HttpStatus.UNAUTHORIZED);
         }
     }
 

@@ -60,7 +60,9 @@ $(document).ready(function (){
                 contentType: "application/json",
                 data: JSON.stringify(user),
                 success: function (result){
+                    console.log(JSON.stringify(result));
                     sessionStorage.setItem("login", true);
+                    sessionStorage.setItem("user", JSON.stringify(result));
                     alert("登录成功!");
                     // 检查是否在iframe中
                     if (window.self !== window.top) {

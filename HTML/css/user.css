@@ -1,0 +1,24 @@
+body {
+    background-image: url("../resources/index.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.profile {
+    text-align: center;
+}
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.profile button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
