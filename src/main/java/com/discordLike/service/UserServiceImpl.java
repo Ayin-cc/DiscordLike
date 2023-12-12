@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
         if(id != 0){
             return userMapper.checkUserById(id);
         }
-        if(username != null && email != null){
+        if(username != null || email != null){
             return userMapper.checkUser(username, email);
         }
 

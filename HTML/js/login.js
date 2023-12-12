@@ -17,7 +17,7 @@ function validateLogin(account, password, user) {
         user.name = account;
         user.email = null;
     }
-    else if (/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(account)) {
+    else if (/^\w+@[a-zA-Z0-9_]+?\.[a-zA-Z]{2,3}$/.test(account)) {
         // email
         user.id = null;
         user.name = null;

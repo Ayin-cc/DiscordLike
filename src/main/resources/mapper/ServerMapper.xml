@@ -4,5 +4,28 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.discordLike.mapper.ServerMapper">
+    <resultMap id="serverListRS" type="com.discordLike.entity.Server">
+        <result property="id" column="id"/>
+        <result property="name" column="server_name"/>
+    </resultMap>
+    <resultMap id="serverRS" type="com.discordLike.entity.Server">
 
+    </resultMap>
+
+    <insert id="addServer">
+        insert into server(server_name, server_owner, server_description)
+        values (#{name}, #{owner}, #{description});
+    </insert>
+    <insert id="addServerToUser">
+        insert into user_server(user_id, server_id)
+        values (#{userId}, #{serverId});
+    </insert>
+
+    <select id="getLastId" resultType="java.lang.Integer">
+        select last_insert_id() from server;
+    </select>
+    <select id="getAllOfUser" resultMap="serverListRS">
+        select server.id, server.server_name from server
+        where server_owner = #{id};
+    </select>
 </mapper>

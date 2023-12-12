@@ -81,7 +81,9 @@ $(document).ready(function (){
     $('#create-server').click(function (){
         $('#create-server-dialog').show();
     });
-    $('#create-server-createBtn').click(function (){
+    $('#create-server-createBtn').click(function (event){
+        event.preventDefault();
+
         // 检查表单内容
         var serverName = $('#input-serverName').val();
         var serverDesc = $('#input-serverDescription').val();
@@ -105,7 +107,8 @@ $(document).ready(function (){
             data: JSON.stringify(server),
             success: function (result){
                 alert('服务器创建成功');
-                // 刷新页面
+                $('#create-server-cancelBtn').click();
+                refreshServerList();
             },
             error: function (jqXHR){
                 alert('服务器创建失败');

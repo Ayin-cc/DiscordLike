@@ -21,22 +21,14 @@ public class ServerController {
     // 创建接口
     @RequestMapping("/create")
     public ResponseEntity<Integer> createServer(@RequestBody Server server){
-
-        return new ResponseEntity<>(200, HttpStatus.OK);
+        int ret = serverService.create(server);
+        return new ResponseEntity<>(ret, HttpStatus.OK);
     }
 
     // 获取服务器列表接口
     @RequestMapping("/getList")
     public ResponseEntity<List<Server>> getServerList(@RequestParam int id){
-        Server server = new Server();
-        server.setId(123);
-        server.setName("test");
-        List<Server> servers = new ArrayList<>();
-        servers.add(server);
-        Server server2 = new Server();
-        server2.setId(233);
-        server2.setName("prpr");
-        servers.add(server2);
+        List<Server> servers = serverService.getAllOfUser(id);
         return new ResponseEntity<>(servers, HttpStatus.OK);
     }
 

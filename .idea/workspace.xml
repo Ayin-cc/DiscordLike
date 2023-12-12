@@ -11,8 +11,14 @@
   <component name="ChangeListManager">
     <list default="true" id="d3c0d78a-08c0-4cbe-b8e2-270820c407cb" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ServerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/ServerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/ServerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/service/ServerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/ServerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/service/ServerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/ServerServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ServerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ServerMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -268,7 +274,7 @@
       <workItem from="1702198502973" duration="1636000" />
       <workItem from="1702274084796" duration="5279000" />
       <workItem from="1702283862518" duration="6280000" />
-      <workItem from="1702356553790" duration="10226000" />
+      <workItem from="1702356553790" duration="12287000" />
     </task>
     <task id="LOCAL-00001" summary="创建项目">
       <created>1700731203157</created>
@@ -424,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702365457533</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="修复注册用户名/邮箱重复bug">
+      <created>1702366929388</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1702366929388</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -478,7 +491,8 @@
     <MESSAGE value="独立页面和iframe中的登录跳转" />
     <MESSAGE value="个人信息页" />
     <MESSAGE value="前端服务器列表展示" />
-    <option name="LAST_COMMIT_MESSAGE" value="前端服务器列表展示" />
+    <MESSAGE value="修复注册用户名/邮箱重复bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复注册用户名/邮箱重复bug" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
