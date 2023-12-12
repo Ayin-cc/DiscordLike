@@ -12,17 +12,21 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public int checkUser(User user){
-        int ret = 0;
-        if(user.getId() != 0){
-            ret = userMapper.checkUser(user.getId());
+        int id = user.getId();
+        String username = user.getName();
+        String email = user.getEmail();
+
+        System.out.println(id);
+        System.out.println(username);
+        System.out.println(email);
+        if(id != 0){
+            return userMapper.checkUserById(id);
         }
-        else if(user.getName() != null){
-            ret = userMapper.checkUser(user.getName());
+        if(username != null && email != null){
+            return userMapper.checkUser(username, email);
         }
-        else if(user.getEmail() != null){
-            ret = userMapper.checkUser(user.getEmail());
-        }
-        return ret;
+
+        return 0;
     }
 
     @Override
