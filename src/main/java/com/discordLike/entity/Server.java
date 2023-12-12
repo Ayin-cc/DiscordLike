@@ -7,22 +7,25 @@ import java.util.List;
 @Component
 public class Server {
     private int id;
-    private String serverName;
+    private String name;
     private User owner;
     private byte[] photo;
     private String code;
+    private String description;
     private List<TextChannel> textChannels;
     private List<AudioChannel> audioChannels;
+
 
     public Server() {
     }
 
-    public Server(int id, String serverName, User owner, byte[] photo, String code, List<TextChannel> textChannels, List<AudioChannel> audioChannels) {
+    public Server(int id, String name, User owner, byte[] photo, String code, String description, List<TextChannel> textChannels, List<AudioChannel> audioChannels) {
         this.id = id;
-        this.serverName = serverName;
+        this.name = name;
         this.owner = owner;
         this.photo = photo;
         this.code = code;
+        this.description = description;
         this.textChannels = textChannels;
         this.audioChannels = audioChannels;
     }
@@ -45,18 +48,18 @@ public class Server {
 
     /**
      * 获取
-     * @return serverName
+     * @return name
      */
-    public String getServerName() {
-        return serverName;
+    public String getName() {
+        return name;
     }
 
     /**
      * 设置
-     * @param serverName
+     * @param name
      */
-    public void setServerName(String serverName) {
-        this.serverName = serverName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     /**
@@ -109,6 +112,22 @@ public class Server {
 
     /**
      * 获取
+     * @return description
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * 设置
+     * @param description
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * 获取
      * @return textChannels
      */
     public List<TextChannel> getTextChannels() {
@@ -141,6 +160,6 @@ public class Server {
 
     @Override
     public String toString() {
-        return "Server{id = " + id + ", serverName = " + serverName + ", owner = " + owner + ", photo = " + photo + ", code = " + code + ", textChannels = " + textChannels + ", audioChannels = " + audioChannels + "}";
+        return "Server{id = " + id + ", name = " + name + ", owner = " + owner + ", photo = " + photo + ", code = " + code + ", description = " + description + ", textChannels = " + textChannels + ", audioChannels = " + audioChannels + "}";
     }
 }

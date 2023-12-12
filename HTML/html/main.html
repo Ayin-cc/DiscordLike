@@ -10,15 +10,37 @@
 <body>
 <div class="container">
     <div class="sidebar" id="sidebar">
-        <a href="#" id="profileLink" class="profile">个人信息</a>
-        <a href="#" id="channel1">频道1</a>
-        <a href="#" id="channel2">频道2</a>
-        <a href="#" id="createChannel" class="create-channel">创建频道</a>
+        <button id="profile-btn" class="profile">个人主页</button>
+        <div id="serverList">
+            <label>服务器列表</label>
+        </div>
+        <button id="create-server" class="create-server">创建服务器</button>
     </div>
     <div class="main-content" id="mainContent">
         <!-- 初始显示登录页面 -->
         <iframe src="login.html" id="show-page"></iframe>
     </div>
+
+    <!-- 创建服务器对话框 -->
+    <dialog id="create-server-dialog" class="dialog-overlay">
+        <div class="dialog-box">
+            <div class="dialog-title">创建服务器</div>
+            <form class="dialog-form" id="createForm">
+                <div class="input-group">
+                    <label for="input-serverName">名称</label>
+                    <input type="text" id="input-serverName" placeholder="4-16位数字、字母、下划线">
+                </div>
+                <div class="input-group">
+                    <label for="input-serverDescription">简介</label>
+                    <textarea id="input-serverDescription" placeholder="服务器简介，100字以内"></textarea>
+                </div>
+                <div class="btn-container">
+                    <button type="submit" id="create-server-createBtn">创建</button>
+                    <button type="button" id="create-server-cancelBtn">取消</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
 </div>
 </body>
 </html>

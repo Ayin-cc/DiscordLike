@@ -66,7 +66,9 @@ $(document).ready(function (){
                     alert("登录成功!");
                     // 检查是否在iframe中
                     if (window.self !== window.top) {
-                        window.parent.document.getElementById('show-page').src = '../html/user.html';
+                        parent.$('#show-page').attr("src", "../html/user.html");
+                        parent.login();
+                        parent.refreshServerList();
                     } else {
                         window.location.href = '../html/main.html';
                     }

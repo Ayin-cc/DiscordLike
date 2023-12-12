@@ -136,7 +136,7 @@ $(document).ready(function (){
             contentType: "application/json",
             data: JSON.stringify(user),
             success: function (result){
-                window.location.href = '../html/main.html';
+                window.location.href = '../html/login.html';
             },
             error: function (jqXHR){
                 var code = jqXHR.status;
