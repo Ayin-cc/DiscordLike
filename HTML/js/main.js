@@ -51,15 +51,13 @@ function refreshServerList(){
         url: "http://127.0.0.1:8080/DiscordLike/server/getList?id=" + id.toString(),
         contentType: "application/json",
         success: function (result){
+            // 添加服务器
             $('.server').remove();
-            let k = 1;
             for(let server of result){
                 let newServer = $('<button class=\"server\" data-server=\"' + server.id.toString() + '\">' + server.name + '</button>');
                 $('#serverList').append(newServer);
-                k++;
             }
             $('.server').click(function (){
-                console.log($(this).data("server"));
                 $('#show-page').attr("src", "server.html?id=" + $(this).data("server"));
             });
         }

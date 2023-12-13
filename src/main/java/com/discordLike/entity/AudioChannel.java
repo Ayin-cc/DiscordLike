@@ -2,19 +2,28 @@ package com.discordLike.entity;
 
 import java.util.List;
 
-public class AudioChannel {
+public class AudioChannel extends Channel{
     private int id;
     private String name;
     private User owner;
+    private String description;
     private List<User> onlineUsers;
 
     public AudioChannel() {
     }
 
-    public AudioChannel(int id, String name, User owner, List<User> onlineUsers) {
+    public AudioChannel(Channel channel){
+        this.id = channel.getId();
+        this.name = channel.getName();
+        this.description = channel.getDescription();
+        this.owner = channel.getOwner();
+    }
+
+    public AudioChannel(int id, String name, User owner, String description, List<User> onlineUsers) {
         this.id = id;
         this.name = name;
         this.owner = owner;
+        this.description = description;
         this.onlineUsers = onlineUsers;
     }
 
@@ -68,6 +77,22 @@ public class AudioChannel {
 
     /**
      * 获取
+     * @return description
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * 设置
+     * @param description
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * 获取
      * @return onlineUsers
      */
     public List<User> getOnlineUsers() {
@@ -84,6 +109,6 @@ public class AudioChannel {
 
     @Override
     public String toString() {
-        return "AudioChannel{id = " + id + ", name = " + name + ", owner = " + owner + ", onlineUsers = " + onlineUsers + "}";
+        return "AudioChannel{id = " + id + ", name = " + name + ", owner = " + owner + ", description = " + description + ", onlineUsers = " + onlineUsers + "}";
     }
 }

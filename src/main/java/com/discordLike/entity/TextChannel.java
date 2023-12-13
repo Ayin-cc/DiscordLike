@@ -5,20 +5,29 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class TextChannel {
+public class TextChannel extends Channel{
     private int id;
     private String name;
     private User owner;
+    private String description;
     private List<SubChannel> subChannels;
     private List<Message> messages;
 
     public TextChannel() {
     }
 
-    public TextChannel(int id, String name, User owner, List<SubChannel> subChannels, List<Message> messages) {
+    public TextChannel(Channel channel){
+        this.id = channel.getId();
+        this.name = channel.getName();
+        this.description = channel.getDescription();
+        this.owner = channel.getOwner();
+    }
+
+    public TextChannel(int id, String name, User owner, String description, List<SubChannel> subChannels, List<Message> messages) {
         this.id = id;
         this.name = name;
         this.owner = owner;
+        this.description = description;
         this.subChannels = subChannels;
         this.messages = messages;
     }
@@ -73,6 +82,22 @@ public class TextChannel {
 
     /**
      * 获取
+     * @return description
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * 设置
+     * @param description
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * 获取
      * @return subChannels
      */
     public List<SubChannel> getSubChannels() {
@@ -105,6 +130,6 @@ public class TextChannel {
 
     @Override
     public String toString() {
-        return "TextChannel{id = " + id + ", name = " + name + ", owner = " + owner + ", subChannels = " + subChannels + ", messages = " + messages + "}";
+        return "TextChannel{id = " + id + ", name = " + name + ", owner = " + owner + ", description = " + description + ", subChannels = " + subChannels + ", messages = " + messages + "}";
     }
 }

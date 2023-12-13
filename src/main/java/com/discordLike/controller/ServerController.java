@@ -35,7 +35,7 @@ public class ServerController {
     // 获取服务器详情接口
     @RequestMapping("/getInfo")
     public ResponseEntity<Server> getServerInfo(@RequestParam int userId, @RequestParam int serverId){
-
-        return new ResponseEntity<>(null, HttpStatus.OK);
+        Server ret = serverService.getServerInfo(userId, serverId);
+        return new ResponseEntity<>(ret, HttpStatus.OK);
     }
 }

@@ -5,11 +5,12 @@
 
 <mapper namespace="com.discordLike.mapper.UserMapper">
     <resultMap id="userRS" type="com.discordLike.entity.User">
-        <result property="id" column="id"/>
+        <id property="id" column="id"/>
         <result property="name" column="user_name"/>
         <result property="email" column="user_email"/>
         <result property="photo" column="user_photo"/>
     </resultMap>
+
     <!-- 判断用户是否存在 -->
     <select id="checkUserById" resultType="int">
         select user.id from user
@@ -26,7 +27,7 @@
     </select>
 
     <select id="getLastId" resultType="int">
-        select last_insert_id() from user;
+        select last_insert_id();
     </select>
 
     <select id="getUser" resultMap="userRS">

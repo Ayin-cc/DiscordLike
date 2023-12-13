@@ -18,13 +18,24 @@ public class ServerServiceImpl implements ServerService {
         int serverOwnerId = server.getOwner().getId();
         String serverDesc = server.getDescription();
         serverMapper.addServer(serverName, serverOwnerId, serverDesc);
-        try {
-            int serverId = serverMapper.getLastId();
-            serverMapper.addServerToUser(serverId, serverOwnerId);
-            return serverId;
+
+        int serverId = 0;
+        try{
+            serverId = serverMapper.getLastId();
         }catch (Exception e){
-            return -1;
+            System.out.println(e.toString());
         }
+        serverMapper.addServerToUser(serverId, serverOwnerId);
+
+        return serverId;
+    }
+
+    @Override
+    public Server getServerInfo(int userId, int serverId) {
+        if(serverMapper.checkServerOfUser(userId, serverId) != 1){
+            return null;
+        }
+        return serverMapper.getServerInfo(serverId);
     }
 
     @Override

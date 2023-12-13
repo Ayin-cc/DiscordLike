@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100vh;
+    margin-left: 20vh;
+}
+.server {
+    text-align: left;
+    margin-right: 150px;
+}
+.server img {
+    text-align: center;
+    width: 100px;
+    height: 78px;
+    margin-bottom: 10px;
+}
+
+.channel-list {
+    text-align: left;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.text-channel, .audio-channel {
+    position: absolute;
+}
+
+.text-channel {
+    top: 10vh;
+}
+
+.audio-channel{
+    bottom: 40vh;
+}
+
+.channel {
+    position: relative;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 10px;
+}

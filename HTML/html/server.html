@@ -2,9 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>服务器</title>
+    <link rel="stylesheet" href="../css/server.css"/>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/server.js"></script>
 </head>
 <body>
+<div class="container">
+    <div class="sidebar" id="sidebar">
+        <button id="info-btn" class="info">服务器信息</button>
+        <div id="text-channel-list">
+            <label>文本频道</label>
+            <button class="channel" data-textChannel="0" disabled="true">null</button>
+        </div>
+        <div id="audio-channel-list">
+            <label>语音频道</label>
+            <button class="channel" data-audioChannel="0" disabled="true">null</button>
+        </div>
+        <button id="create-channel" class="create-channel">创建频道</button>
+        <button id="back-btn" class="back-btn">返回</button>
+    </div>
+    <div class="main-content" id="mainContent">
+        <!-- 初始显示服务器信息页 -->
+        <iframe src="server-info.html" id="show-page"></iframe>
+    </div>
 
+    <!-- 创建频道对话框 -->
+    <dialog id="create-channel-dialog" class="dialog-overlay">
+        <div class="dialog-box">
+            <div class="dialog-title">创建频道</div>
+            <form class="dialog-form" id="createForm">
+                <div class="input-group">
+                    <label for="input-channelName">名称</label>
+                    <input type="text" id="input-channelName" placeholder="4-16位数字、字母、下划线">
+                </div>
+                <div class="input-group">
+                    <label for="input-channelDescription">简介</label>
+                    <textarea id="input-channelDescription" placeholder="频道简介，100字以内"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="channel-type">类型</label>
+                    <div id="channel-type">
+                        <input type="radio" id="text-channel-option" name="channel-type" value="text" checked>
+                        <label for="text-channel-option" class="option-label">文本</label>
+                        <input type="radio" id="audio-channel-option" name="channel-type" value="audio">
+                        <label for="audio-channel-option" class="option-label">语音</label>
+                    </div>
+                </div>
+                <div class="btn-container">
+                    <button type="submit" id="create-channel-createBtn">创建</button>
+                    <button type="button" id="create-channel-cancelBtn">取消</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+</div>
 </body>
 </html>

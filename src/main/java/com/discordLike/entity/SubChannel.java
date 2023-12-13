@@ -2,20 +2,29 @@ package com.discordLike.entity;
 
 import java.util.List;
 
-public class SubChannel {
+public class SubChannel extends Channel{
     private int id;
     private String name;
     private User owner;
+    private String description;
     private TextChannel mainChannel;
     private List<Message> messages;
 
     public SubChannel() {
     }
 
-    public SubChannel(int id, String name, User owner, TextChannel mainChannel, List<Message> messages) {
+    public SubChannel(Channel channel){
+        this.id = channel.getId();
+        this.name = channel.getName();
+        this.description = channel.getDescription();
+        this.owner = channel.getOwner();
+    }
+
+    public SubChannel(int id, String name, User owner, String description, TextChannel mainChannel, List<Message> messages) {
         this.id = id;
         this.name = name;
         this.owner = owner;
+        this.description = description;
         this.mainChannel = mainChannel;
         this.messages = messages;
     }
@@ -70,6 +79,22 @@ public class SubChannel {
 
     /**
      * 获取
+     * @return description
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * 设置
+     * @param description
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * 获取
      * @return mainChannel
      */
     public TextChannel getMainChannel() {
@@ -102,6 +127,6 @@ public class SubChannel {
 
     @Override
     public String toString() {
-        return "SubChannel{id = " + id + ", name = " + name + ", owner = " + owner + ", mainChannel = " + mainChannel + ", messages = " + messages + "}";
+        return "SubChannel{id = " + id + ", name = " + name + ", owner = " + owner + ", description = " + description + ", mainChannel = " + mainChannel + ", messages = " + messages + "}";
     }
 }

@@ -7,5 +7,6 @@ import java.util.List;
 
 public interface ServerService {
     int create(Server server);
+    Server getServerInfo(int userId, int serverId);
     List<Server> getAllOfUser(int id);
 }

@@ -10,15 +10,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3c0d78a-08c0-4cbe-b8e2-270820c407cb" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/HTML/css/server-info.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/css/server.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/html/server-info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/js/server-info.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/js/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HTML/resources/server.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/Channel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/html/server.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/html/server.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTML/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ChannelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ChannelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ServerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/AudioChannel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/AudioChannel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/SubChannel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/SubChannel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/TextChannel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/TextChannel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/AudioChannelMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/AudioChannelMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/ServerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/ServerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/TextChannelMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/TextChannelMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/service/ChannelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/ChannelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/service/ChannelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/ChannelServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/service/ServerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/ServerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/service/ServerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/ServerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AudioChannelMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AudioChannelMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ServerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ServerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TextChannelMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TextChannelMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,11 +51,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -74,6 +90,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "DefaultHtmlFileTemplate": "HTML File",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -95,6 +112,9 @@
   "keyToStringList": {
     "DatabaseDriversLRU": [
       "mysql"
+    ],
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL 方言": [
+      "MySQL"
     ]
   }
 }]]></component>
@@ -275,6 +295,10 @@
       <workItem from="1702274084796" duration="5279000" />
       <workItem from="1702283862518" duration="6280000" />
       <workItem from="1702356553790" duration="12287000" />
+      <workItem from="1702370232768" duration="4738000" />
+      <workItem from="1702382759535" duration="7000" />
+      <workItem from="1702446571698" duration="6331000" />
+      <workItem from="1702457863247" duration="6093000" />
     </task>
     <task id="LOCAL-00001" summary="创建项目">
       <created>1700731203157</created>
@@ -472,6 +496,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="创建项目" />
     <MESSAGE value="建立基本架构以及配置文件" />
     <MESSAGE value="Dao层基础代码以及mapper文件" />

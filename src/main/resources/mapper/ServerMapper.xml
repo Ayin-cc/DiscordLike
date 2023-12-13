@@ -5,11 +5,28 @@
 
 <mapper namespace="com.discordLike.mapper.ServerMapper">
     <resultMap id="serverListRS" type="com.discordLike.entity.Server">
-        <result property="id" column="id"/>
+        <id property="id" column="id"/>
         <result property="name" column="server_name"/>
     </resultMap>
+    <resultMap id="userRS" type="com.discordLike.entity.User">
+        <id property="id" column="user_id"/>
+        <result property="name" column="user_name"/>
+    </resultMap>
+    <resultMap id="textChannelRS" type="com.discordLike.entity.TextChannel">
+        <id property="id" column="text_channel_id"/>
+        <result property="name" column="text_channel_name"/>
+    </resultMap>
+    <resultMap id="audioChannelRS" type="com.discordLike.entity.AudioChannel">
+        <id property="id" column="audio_channel_id"/>
+        <result property="name" column="audio_channel_name"/>
+    </resultMap>
     <resultMap id="serverRS" type="com.discordLike.entity.Server">
-
+        <id property="id" column="id"/>
+        <result property="name" column="server_name"/>
+        <result property="description" column="server_description"/>
+        <association property="owner" resultMap="userRS"/>
+        <collection property="textChannels" resultMap="textChannelRS"/>
+        <collection property="audioChannels" resultMap="audioChannelRS"/>
     </resultMap>
 
     <insert id="addServer">
@@ -21,11 +38,25 @@
         values (#{userId}, #{serverId});
     </insert>
 
+    <select id="checkServerOfUser" resultType="java.lang.Integer">
+        select count(*) from user_server
+        where user_id = #{userId} and server_id = #{serverId}
+    </select>
     <select id="getLastId" resultType="java.lang.Integer">
-        select last_insert_id() from server;
+        select last_insert_id();
     </select>
     <select id="getAllOfUser" resultMap="serverListRS">
         select server.id, server.server_name from server
-        where server_owner = #{id};
+        where server_owner = #{id}
+        order by id;
     </select>
+    <select id="getServerInfo" resultMap="serverRS">
+        select server.id, server.server_name, server.server_description, user.id as user_id, user.user_name, text_channel.id as text_channel_id, text_channel.channel_name as text_channel_name, audio_channel.id as audio_channel_id, audio_channel.channel_name as audio_channel_name
+        from server left join user on server.server_owner = user.id
+                    left join server_channel on server.id = server_channel.server_id
+                    left join text_channel on server_channel.channel_id = text_channel.id
+                    left join audio_channel on server_channel.channel_id = audio_channel.id
+        where server.id = #{serverId};
+    </select>
+
 </mapper>

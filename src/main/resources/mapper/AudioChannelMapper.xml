@@ -5,4 +5,16 @@
 
 <mapper namespace="com.discordLike.mapper.AudioChannelMapper">
 
+    <insert id="addChannel">
+        insert into audio_channel(channel_name, channel_owner, channel_description)
+        values (#{channel.name}, #{channel.owner.id}, #{channel.description});
+    </insert>
+    <insert id="addChannelToServer">
+        insert into server_channel(server_id, channel_id)
+        values (#{serverId}, #{channelId});
+    </insert>
+
+    <select id="getLastId" resultType="java.lang.Integer">
+        select last_insert_id();
+    </select>
 </mapper>
