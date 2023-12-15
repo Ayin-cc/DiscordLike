@@ -34,7 +34,7 @@ public class ServerController {
     // 获取服务器详情接口
     @RequestMapping("/getInfo")
     public ResponseEntity<Server> getServerInfo(@RequestParam int userId, @RequestParam int serverId){
-        if(!serverService.checkUser(userId)){
+        if(serverService.checkUser(userId) == -1){
             return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
         }
         Server ret = serverService.getServerInfo(serverId);
@@ -44,6 +44,12 @@ public class ServerController {
     // 用户加入服务器接口
     @RequestMapping("/join")
     public ResponseEntity<Integer> joinServer(@RequestParam("serverId")int serverId, @RequestBody User user){
+        if(serverService.checkUser(user.getId()) == -1){
+            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+        }
+        if(serverService.checkServer(serverId) == -1){
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
         serverService.join(serverId, user);
         return new ResponseEntity<>(200, HttpStatus.OK);
     }

@@ -14,6 +14,7 @@ public interface ServerMapper {
     void addServerToUser(@Param("serverId")int serverId, @Param("userId")int userId);
     void addServer(@Param("name")String name, @Param("owner")int id, @Param("description")String description);
     int getLastId();
+    int checkServer(@Param("serverId")int serverId);
     int checkServerOfUser(@Param("userId")int userId, @Param("serverId")int serverId);
     Server getServerInfo(@Param("serverId")int serverId);
     List<Server> getAllOfUser(@Param("id")int id);

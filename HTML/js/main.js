@@ -164,7 +164,13 @@ $(document).ready(function (){
                 alert("加入成功");
             },
             error: function (jqXHR){
-                alert("加入失败");
+                var code = jqXHR.status;
+                if(code === 400){
+                    alert("请求错误");
+                }
+                else if(code === 404){
+                    alert("服务器不存在");
+                }
             }
         })
     })

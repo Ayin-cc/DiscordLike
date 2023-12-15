@@ -35,12 +35,19 @@ public class ServerServiceImpl implements ServerService {
         return serverId;
     }
 
-    public boolean checkUser(int userId){
+    public int checkUser(int userId){
         try {
-            userMapper.checkUserById(userId);
-            return true;
+            return userMapper.checkUserById(userId);
         }catch (Exception e){
-            return false;
+            return -1;
+        }
+    }
+
+    public int checkServer(int serverId){
+        try{
+            return serverMapper.checkServer(serverId);
+        }catch (Exception e){
+            return -1;
         }
     }
 
