@@ -15,6 +15,7 @@
             <label>服务器列表</label>
         </div>
         <button id="create-server" class="create-server">创建服务器</button>
+        <button id="join-server" class="join-server">加入服务器</button>
     </div>
     <div class="main-content" id="mainContent">
         <!-- 初始显示登录页面 -->
@@ -37,6 +38,23 @@
                 <div class="btn-container">
                     <button type="submit" id="create-server-createBtn">创建</button>
                     <button type="button" id="create-server-cancelBtn">取消</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+
+    <!--  加入服务器对话框  -->
+    <dialog id="join-server-dialog" class="dialog-overlay">
+        <div class="dialog-box">
+            <div class="dialog-title">加入服务器</div>
+            <form class="dialog-form" id="joinForm">
+                <div class="input-group">
+                    <label for="input-serverName">ID</label>
+                    <input type="text" id="input-serverId" placeholder="服务器ID">
+                </div>
+                <div class="btn-container">
+                    <button type="submit" id="join-server-joinBtn">加入</button>
+                    <button type="button" id="join-server-cancelBtn">取消</button>
                 </div>
             </form>
         </div>

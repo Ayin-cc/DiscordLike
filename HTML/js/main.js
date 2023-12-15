@@ -8,11 +8,13 @@ function login(){
         $('#profile-btn').text("未登录");
         $('#profile-btn').prop("disabled", true);
         $('#create-server').prop("disabled", true);
+        $('#join-server').prop("disabled", true)
     } else {
         // 登录状态，展示个人信息
         $('#profile-btn').text("个人信息");
         $('#profile-btn').prop("disabled", false);
         $('#create-server').prop("disabled", false);
+        $('#join-server').prop("disabled", false)
         $('#show-page').attr("src", "user.html");
         refreshServerList();
     }
@@ -42,6 +44,21 @@ function validateServer(name, desc){
     return true;
 }
 
+// 检查服务器ID格式
+function validateServerId(serverId){
+    if(serverId === ''){
+        alert("id不能为空")
+        return false;
+    }
+
+    if(/^\d+$/.test(serverId)){
+        return true;
+    }
+
+    alert("ID格式错误");
+    return false;
+}
+
 // 刷新服务器列表
 function refreshServerList(){
     var id = JSON.parse(sessionStorage.getItem("user")).id;
@@ -51,6 +68,7 @@ function refreshServerList(){
         url: "http://127.0.0.1:8080/DiscordLike/server/getList?id=" + id.toString(),
         contentType: "application/json",
         success: function (result){
+            console.log(JSON.stringify(result));
             // 添加服务器
             $('.server').remove();
             for(let server of result){
@@ -69,6 +87,7 @@ $(document).ready(function (){
     login();
 
     $('#create-server-dialog').hide();
+    $('#join-server-dialog').hide();
 
     // 个人信息
     $('#profile-btn').click(function (){
@@ -119,4 +138,38 @@ $(document).ready(function (){
         $('#input-serverName').val('');
         $('#input-serverDescription').val('');
     });
+
+    // 加入服务器
+    $('#join-server').click(function (){
+        $('#join-server-dialog').show();
+    })
+    $('#join-server-joinBtn').click(function (event){
+        event.preventDefault();
+
+        var serverId = $('#input-serverId').val();
+        if(!validateServerId(serverId)){
+            return;
+        }
+
+        var user = {
+            "id": JSON.parse(sessionStorage.getItem("user")).id
+        };
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "http://127.0.0.1:8080/DiscordLike/server/join?serverId=" + serverId.toString(),
+            contentType: "application/json",
+            data: JSON.stringify(user),
+            success: function (result){
+                alert("加入成功");
+            },
+            error: function (jqXHR){
+                alert("加入失败");
+            }
+        })
+    })
+    $('#join-server-cancelBtn').click(function (){
+        $('#join-server-dialog').hide();
+        $('#input-serverId').val('');
+    })
 });

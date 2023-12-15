@@ -8,7 +8,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -35,7 +34,17 @@ public class ServerController {
     // 获取服务器详情接口
     @RequestMapping("/getInfo")
     public ResponseEntity<Server> getServerInfo(@RequestParam int userId, @RequestParam int serverId){
-        Server ret = serverService.getServerInfo(userId, serverId);
+        if(!serverService.checkUser(userId)){
+            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+        }
+        Server ret = serverService.getServerInfo(serverId);
         return new ResponseEntity<>(ret, HttpStatus.OK);
+    }
+
+    // 用户加入服务器接口
+    @RequestMapping("/join")
+    public ResponseEntity<Integer> joinServer(@RequestParam("serverId")int serverId, @RequestBody User user){
+        serverService.join(serverId, user);
+        return new ResponseEntity<>(200, HttpStatus.OK);
     }
 }

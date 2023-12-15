@@ -55,6 +55,10 @@ body, html {
     margin-top: 30px;
 }
 
+.join-server {
+    margin-top: 10px;
+}
+
 iframe{
     width: 88vw;
     height: 100%;

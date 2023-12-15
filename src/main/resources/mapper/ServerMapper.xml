@@ -37,6 +37,10 @@
         insert into user_server(user_id, server_id)
         values (#{userId}, #{serverId});
     </insert>
+    <insert id="addJoinerToServer">
+        insert into server_joiner(server_id, joiner_id)
+        values (#{serverId}, #{userId});
+    </insert>
 
     <select id="checkServerOfUser" resultType="java.lang.Integer">
         select count(*) from user_server
@@ -50,6 +54,10 @@
         where server_owner = #{id}
         order by id;
     </select>
+    <select id="getJoinedOfUser" resultMap="serverListRS">
+        select server.id, server.server_name from (select * from server_joiner where joiner_id = #{id}) sj
+        left join server on sj.server_id = server.id;
+    </select>
     <select id="getServerInfo" resultMap="serverRS">
         select server.id, server.server_name, server.server_description, user.id as user_id, user.user_name, text_channel.id as text_channel_id, text_channel.channel_name as text_channel_name, audio_channel.id as audio_channel_id, audio_channel.channel_name as audio_channel_name
         from server left join user on server.server_owner = user.id
@@ -58,5 +66,6 @@
                     left join audio_channel on server_channel.channel_id = audio_channel.id
         where server.id = #{serverId};
     </select>
+
 
 </mapper>

@@ -20,11 +20,11 @@ function refreshPage(userId, serverId){
             }
 
             sessionStorage.setItem("server", JSON.stringify(result));
-            $('#info-btn').click();
         }
     });
 
     // 信息页
+    $('#info-btn').click();
 }
 
 // 检查创建频道的表单

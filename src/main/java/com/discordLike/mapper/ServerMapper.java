@@ -10,10 +10,12 @@ import java.util.List;
 @Repository
 @Mapper
 public interface ServerMapper {
+    void addJoinerToServer(@Param("serverId")int serverId, @Param("userId")int userId);
     void addServerToUser(@Param("serverId")int serverId, @Param("userId")int userId);
     void addServer(@Param("name")String name, @Param("owner")int id, @Param("description")String description);
     int getLastId();
     int checkServerOfUser(@Param("userId")int userId, @Param("serverId")int serverId);
     Server getServerInfo(@Param("serverId")int serverId);
     List<Server> getAllOfUser(@Param("id")int id);
+    List<Server> getJoinedOfUser(@Param("id")int id);
 }
