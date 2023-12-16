@@ -83,8 +83,11 @@
     <delete id="deleteServer">
         delete from server where id = #{serverId};
     </delete>
-    <delete id="deleteJoiner">
+    <delete id="deleteJoinerOfServer">
         delete from server_joiner where server_id = #{serverId};
+    </delete>
+    <delete id="deleteJoiner">
+        delete from server_joiner where server_id = #{serverId} and joiner_id = #{userId};
     </delete>
     <delete id="deleteUser">
         delete from user_server where server_id = #{serverId};

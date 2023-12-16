@@ -67,6 +67,16 @@ public class UserController {
             }
             return new ResponseEntity<>(id, HttpStatus.OK);
         }
+    }
 
+    // 删除账号接口
+    @RequestMapping("/delete")
+    public ResponseEntity<Integer> delete(@RequestBody User user){
+        System.out.println(user.toString());
+        if(userService.login(user.getId(), user.getPasswd())) {
+            userService.delete(user.getId());
+            return new ResponseEntity<>(200, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(400, HttpStatus.BAD_REQUEST);
     }
 }

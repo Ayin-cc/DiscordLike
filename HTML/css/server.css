@@ -68,6 +68,10 @@ body, html {
     margin-top: 100px;
 }
 
+.delete-server {
+    margin-top: 10px;
+}
+
 .back-btn {
     margin-top: 10px;
 }

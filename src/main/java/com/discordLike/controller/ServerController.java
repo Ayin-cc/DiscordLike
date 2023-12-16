@@ -39,6 +39,10 @@ public class ServerController {
             if(!serverService.isJoiner(serverId, user.getId())) {
                 return new ResponseEntity<>(400, HttpStatus.BAD_REQUEST);
             }
+
+            // 为用户移除服务器
+            serverService.removeFromUser(serverId, user.getId());
+            return new ResponseEntity<>(200, HttpStatus.OK);
         }
 
         // 执行删除

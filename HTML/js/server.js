@@ -115,6 +115,45 @@ $(document).ready(function (){
         $('#input-channelDescription').val('');
     });
 
+    // 删除
+    $('#delete-server').click(function (){
+        var serverOwnerId = JSON.parse(sessionStorage.getItem("server")).owner.id;
+        var conf;
+        if(serverOwnerId === userId){
+            conf = confirm("您是服务器的创建者，删除后所有相关数据都将一并删除，确认删除吗");
+        }
+        else{
+            conf = confirm("您是服务器的加入者，删除后该服务器将从您的服务器列表移除，确认删除吗");
+        }
+
+        if(conf) {
+            var sid = prompt("请输入该服务器id以确认");
+            if(sid === serverId){
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    url: "http://127.0.0.1:8080/DiscordLike/server/delete?serverId=" + serverId.toString(),
+                    contentType: "application/json",
+                    data: JSON.stringify({"id": userId}),
+                    success: function (result){
+                        alert("删除成功");
+                        sessionStorage.removeItem("server");
+                        parent.location.reload();
+                    },
+                    error: function (jqXHR){
+                        var code = jqXHR.status;
+                        if(code === 400){
+                            alert("删除失败");
+                        }
+                    }
+                })
+            }
+            else{
+                alert("输入错误");
+            }
+        }
+    });
+
     // 返回
     $('#back-btn').click(function (){
         window.location.href = '../html/user.html';

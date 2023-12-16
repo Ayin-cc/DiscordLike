@@ -22,6 +22,7 @@ public interface ServerMapper {
     List<Server> getAllOfUser(@Param("id")int id);
     List<Server> getJoinedOfUser(@Param("id")int id);
     void deleteServer(@Param("serverId")int serverId);
-    void deleteJoiner(@Param("serverId")int serverID);
+    void deleteJoinerOfServer(@Param("serverId")int serverID);
+    void deleteJoiner(@Param("serverId")int serverId, @Param("userId")int userId);
     void deleteUser(@Param("serverId")int serverId);
 }

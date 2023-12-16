@@ -35,11 +35,20 @@ public class ServerServiceImpl implements ServerService {
         return serverId;
     }
 
+    public int removeFromUser(int serverId, int userId){
+        try{
+            serverMapper.deleteJoiner(serverId, userId);
+            return 1;
+        }catch (Exception e){
+            return -1;
+        }
+    }
+
     @Override
     public int delete(int serverId){
         try{
             serverMapper.deleteServer(serverId);
-            serverMapper.deleteJoiner(serverId);
+            serverMapper.deleteJoinerOfServer(serverId);
             serverMapper.deleteUser(serverId);
             return 1;
         }catch (Exception e){

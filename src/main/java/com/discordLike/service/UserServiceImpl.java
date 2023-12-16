@@ -20,9 +20,6 @@ public class UserServiceImpl implements UserService {
         String username = user.getName();
         String email = user.getEmail();
 
-        System.out.println(id);
-        System.out.println(username);
-        System.out.println(email);
         if(id != 0){
             return userMapper.checkUserById(id);
         }
@@ -35,10 +32,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean login(int id, String passwd){
-        if(userMapper.checkPasswd(id, passwd) == 1){
-            return true;
-        }
-        return false;
+        return userMapper.checkPasswd(id, passwd) == 1;
     }
 
     @Override
@@ -56,10 +50,16 @@ public class UserServiceImpl implements UserService {
         try{
             userMapper.deleteUser(id);
             for(Server server : serverMapper.getAllOfUser(id)){
+                // 删除拥有的服务器
                 int serverId = server.getId();
                 serverMapper.deleteServer(serverId);
-                serverMapper.deleteJoiner(serverId);
+                serverMapper.deleteJoinerOfServer(serverId);
                 serverMapper.deleteUser(serverId);
+            }
+            for(Server server : serverMapper.getJoinedOfUser(id)){
+                // 从加入的服务器中删除
+                int serverId = server.getId();
+                serverMapper.deleteJoiner(serverId, id);
             }
             return 1;
         }catch (Exception e){
