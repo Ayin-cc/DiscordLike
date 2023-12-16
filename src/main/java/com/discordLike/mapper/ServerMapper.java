@@ -16,7 +16,12 @@ public interface ServerMapper {
     int getLastId();
     int checkServer(@Param("serverId")int serverId);
     int checkServerOfUser(@Param("userId")int userId, @Param("serverId")int serverId);
+    int checkOwner(@Param("serverId")int serverId, @Param("userId")int userId);
+    int checkJoiner(@Param("serverId")int serverId, @Param("userId")int userId);
     Server getServerInfo(@Param("serverId")int serverId);
     List<Server> getAllOfUser(@Param("id")int id);
     List<Server> getJoinedOfUser(@Param("id")int id);
+    void deleteServer(@Param("serverId")int serverId);
+    void deleteJoiner(@Param("serverId")int serverID);
+    void deleteUser(@Param("serverId")int serverId);
 }

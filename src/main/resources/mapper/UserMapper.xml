@@ -39,4 +39,8 @@
         insert into user(user_name, user_passwd, user_email)
         values (#{user.name}, #{user.passwd}, #{user.email});
     </insert>
+
+    <delete id="deleteUser">
+        delete from user where id = #{id};
+    </delete>
 </mapper>

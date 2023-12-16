@@ -15,4 +15,5 @@ public interface UserMapper {
     void addUser(@Param("user")User user);
     User getUser(@Param("id")int id);
     User getUser(@Param("id")String id);
+    void deleteUser(@Param("id")int id);
 }

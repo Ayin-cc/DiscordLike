@@ -35,6 +35,18 @@ public class ServerServiceImpl implements ServerService {
         return serverId;
     }
 
+    @Override
+    public int delete(int serverId){
+        try{
+            serverMapper.deleteServer(serverId);
+            serverMapper.deleteJoiner(serverId);
+            serverMapper.deleteUser(serverId);
+            return 1;
+        }catch (Exception e){
+            return -1;
+        }
+    }
+
     public int checkUser(int userId){
         try {
             return userMapper.checkUserById(userId);
@@ -51,6 +63,20 @@ public class ServerServiceImpl implements ServerService {
         }
     }
 
+    public boolean isOwner(int serverId, int userId){
+        if (serverMapper.checkOwner(serverId, userId) == 1) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isJoiner(int serverId, int userId){
+        if (serverMapper.checkJoiner(serverId, userId) == 1) {
+            return true;
+        }
+        return false;
+    }
+
     @Override
     public Server getServerInfo(int serverId) {
         return serverMapper.getServerInfo(serverId);
@@ -58,14 +84,14 @@ public class ServerServiceImpl implements ServerService {
 
     @Override
     public List<Server> getAllOfUser(int id){
-//        try{
+        try{
             List<Server> list = new ArrayList<>();
             list.addAll(serverMapper.getAllOfUser(id));
             list.addAll(serverMapper.getJoinedOfUser(id));
             return list;
-//        }catch (Exception e){
-//            return null;
-//        }
+        }catch (Exception e){
+            return null;
+        }
     }
 
     public int join(int serverId, User user){

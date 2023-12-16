@@ -1,6 +1,8 @@
 package com.discordLike.service;
 
+import com.discordLike.entity.Server;
 import com.discordLike.entity.User;
+import com.discordLike.mapper.ServerMapper;
 import com.discordLike.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,6 +11,8 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private ServerMapper serverMapper;
 
     @Override
     public int checkUser(User user){
@@ -42,6 +46,22 @@ public class UserServiceImpl implements UserService {
         userMapper.addUser(user);
         try{
             return userMapper.getLastId();
+        }catch (Exception e){
+            return -1;
+        }
+    }
+
+    @Override
+    public int delete(int id){
+        try{
+            userMapper.deleteUser(id);
+            for(Server server : serverMapper.getAllOfUser(id)){
+                int serverId = server.getId();
+                serverMapper.deleteServer(serverId);
+                serverMapper.deleteJoiner(serverId);
+                serverMapper.deleteUser(serverId);
+            }
+            return 1;
         }catch (Exception e){
             return -1;
         }

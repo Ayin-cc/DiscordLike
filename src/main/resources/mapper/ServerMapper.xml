@@ -50,6 +50,14 @@
         select count(*) from server
         where id = #{serverId};
     </select>
+    <select id="checkOwner" resultType="java.lang.Integer">
+        select count(*) from user_server
+        where server_id = #{serverId} and user_id = #{userId};
+    </select>
+    <select id="checkJoiner" resultType="java.lang.Integer">
+        select count(*) from server_joiner
+        where server_id = #{serverId} and joiner_id = #{userId};
+    </select>
 
     <select id="getLastId" resultType="java.lang.Integer">
         select last_insert_id();
@@ -72,6 +80,14 @@
         where server.id = #{serverId};
     </select>
 
-
+    <delete id="deleteServer">
+        delete from server where id = #{serverId};
+    </delete>
+    <delete id="deleteJoiner">
+        delete from server_joiner where server_id = #{serverId};
+    </delete>
+    <delete id="deleteUser">
+        delete from user_server where server_id = #{serverId};
+    </delete>
 
 </mapper>

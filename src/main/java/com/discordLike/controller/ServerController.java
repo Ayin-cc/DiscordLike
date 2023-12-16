@@ -17,11 +17,33 @@ public class ServerController {
     @Autowired
     private ServerServiceImpl serverService;
 
-    // 创建接口
+    // 创建服务器接口
     @RequestMapping("/create")
     public ResponseEntity<Integer> createServer(@RequestBody Server server){
         int ret = serverService.create(server);
         return new ResponseEntity<>(ret, HttpStatus.OK);
+    }
+
+    // 删除服务器接口
+    @RequestMapping("/delete")
+    public ResponseEntity<Integer> deleteServer(@RequestParam("serverId") int serverId, @RequestBody User user){
+        if(serverService.checkUser(user.getId()) == -1){
+            return new ResponseEntity<>(400, HttpStatus.BAD_REQUEST);
+        }
+        if(serverService.checkServer(serverId) == -1){
+            return new ResponseEntity<>(400, HttpStatus.BAD_REQUEST);
+        }
+        // 判断是否为服务器创建者
+        if(!serverService.isOwner(serverId, user.getId())) {
+            // 判断是否为服务器加入者
+            if(!serverService.isJoiner(serverId, user.getId())) {
+                return new ResponseEntity<>(400, HttpStatus.BAD_REQUEST);
+            }
+        }
+
+        // 执行删除
+        serverService.delete(serverId);
+        return new ResponseEntity<>(200, HttpStatus.OK);
     }
 
     // 获取服务器列表接口
