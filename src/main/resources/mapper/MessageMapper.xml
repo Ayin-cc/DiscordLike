@@ -4,5 +4,33 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.discordLike.mapper.MessageMapper">
+    <resultMap id="senderRS" type="com.discordLike.entity.User">
+        <id property="id" column="user_id"/>
+        <result property="name" column="user_name"/>
+    </resultMap>
 
+    <resultMap id="MessageRS" type="com.discordLike.entity.Message">
+        <id property="id" column="id"/>
+        <result property="content" column="msg_content"/>
+        <result property="time" column="msg_time"/>
+        <association property="sender" resultMap="senderRS"/>
+    </resultMap>
+
+    <insert id="addMessage">
+        insert into message(from_id, msg_content, msg_time)
+        values (#{fromId}, #{content}, #{time});
+    </insert>
+    <insert id="addMessageToChannel">
+        insert into channel_message(channel_id, message_id)
+        values (#{channelId}, #{msgId});
+    </insert>
+
+    <select id="getMessageById" resultMap="MessageRS">
+        select message.*, user.id as user_id, user.user_name from message
+                                                        left join user on from_id = user.id
+        where message.id = #{id};
+    </select>
+    <select id="getLastInsertId" resultType="java.lang.Integer">
+        select last_insert_id();
+    </select>
 </mapper>

@@ -10,19 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3c0d78a-08c0-4cbe-b8e2-270820c407cb" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/component/ChatSocketServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/config/WebSocketConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/css/server.css" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/css/server.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/css/user.css" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/css/user.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/html/server.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/html/server.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/html/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/html/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/js/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/js/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/js/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/js/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ServerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/ServerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/ServerMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/service/ServerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/ServerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ServerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ServerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ChannelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ChannelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/MessageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/entity/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/MessageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/MessageMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/TextChannelMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/TextChannelMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/service/ChannelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/ChannelServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/service/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/MessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/service/MessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/MessageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/MessageMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/MessageMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TextChannelMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TextChannelMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,7 +295,8 @@
       <workItem from="1702567500965" duration="482000" />
       <workItem from="1702611896676" duration="2773000" />
       <workItem from="1702615900138" duration="448000" />
-      <workItem from="1702734874583" duration="4103000" />
+      <workItem from="1702734874583" duration="7848000" />
+      <workItem from="1702791222366" duration="6602000" />
     </task>
     <task id="LOCAL-00001" summary="创建项目">
       <created>1700731203157</created>
@@ -485,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702736214126</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="用户和服务器删除功能剩余部分实现">
+      <created>1702739019488</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1702739019488</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -545,7 +554,8 @@
     <MESSAGE value="加入服务器功能实现" />
     <MESSAGE value="加入服务器功能优化" />
     <MESSAGE value="用户和服务器删除接口实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="用户和服务器删除接口实现" />
+    <MESSAGE value="用户和服务器删除功能剩余部分实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="用户和服务器删除功能剩余部分实现" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

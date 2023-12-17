@@ -17,5 +17,10 @@
     <select id="getLastId" resultType="java.lang.Integer">
         select last_insert_id();
     </select>
+    <select id="getAllMessageId" resultType="java.lang.Integer">
+        select message_id from channel_message
+        where channel_id = #{channelId};
+    </select>
+
 
 </mapper>

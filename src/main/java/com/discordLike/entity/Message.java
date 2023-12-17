@@ -21,6 +21,17 @@ public class Message {
         this.time = time;
     }
 
+    public static Message systemMessage(String content){
+        Message sysMsg = new Message();
+        User user = new User();
+        user.setId(0);
+        user.setName("System");
+        sysMsg.sender = user;
+        sysMsg.content = content;
+        sysMsg.time = LocalDateTime.now();
+        return sysMsg;
+    }
+
     /**
      * 获取
      * @return id

@@ -7,6 +7,8 @@ import com.discordLike.mapper.TextChannelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ChannelServiceImpl implements ChannelService {
     @Autowired
@@ -41,5 +43,13 @@ public class ChannelServiceImpl implements ChannelService {
             return -1;
         }
         return id;
+    }
+
+    public List<Integer> historyMsgId(int channelId){
+        try{
+            return textChannelMapper.getAllMessageId(channelId);
+        }catch (Exception e){
+            return null;
+        }
     }
 }
