@@ -76,6 +76,12 @@ public class ServerController {
         if(serverService.checkServer(serverId) == -1){
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
+        if(serverService.isJoiner(serverId, user.getId())){
+            return new ResponseEntity<>(null, HttpStatus.CONFLICT);
+        }
+        if(serverService.isOwner(serverId, user.getId())){
+            return new ResponseEntity<>(null, HttpStatus.CONFLICT);
+        }
         serverService.join(serverId, user);
         return new ResponseEntity<>(200, HttpStatus.OK);
     }

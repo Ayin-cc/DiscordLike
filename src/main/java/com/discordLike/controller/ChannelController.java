@@ -34,6 +34,18 @@ public class ChannelController {
         return new ResponseEntity<>(ret, HttpStatus.OK);
     }
 
+    // 获取频道信息
+    @RequestMapping("/text/info")
+    public ResponseEntity<Channel> getTextChannelInfo(@RequestParam("id")int id){
+        Channel channel = channelService.getChannel(id, true);
+        return new ResponseEntity<>(channel, HttpStatus.OK);
+    }
+    @RequestMapping("/audio/info")
+    public ResponseEntity<Channel> getAudioChannelInfo(@RequestParam("id")int id){
+        Channel channel = channelService.getChannel(id, false);
+        return new ResponseEntity<>(channel, HttpStatus.OK);
+    }
+
     // 获取文本频道历史消息
     @RequestMapping("/text/history")
     public ResponseEntity<List<Message>> queryHistory(@RequestParam("channelId")int channelId){
@@ -42,5 +54,12 @@ public class ChannelController {
             messageList.add(messageService.getMessage(id));
         }
         return new ResponseEntity<>(messageList, HttpStatus.OK);
+    }
+
+    // 删除频道
+    @RequestMapping("/text/delete")
+    public ResponseEntity<Integer> deleteChannel(@RequestParam("channelId")int channelId){
+        channelService.deleteChannel(channelId, true);
+        return new ResponseEntity<>(200, HttpStatus.OK);
     }
 }

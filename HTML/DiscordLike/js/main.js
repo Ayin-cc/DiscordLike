@@ -65,13 +65,13 @@ function refreshServerList(){
     $.ajax({
         type: "POST",
         dataType: "json",
-        url: "http://127.0.0.1:8080/DiscordLike/server/getList?id=" + id.toString(),
+        url: "/DiscordLike/server/getList?id=" + id.toString(),
         contentType: "application/json",
         success: function (result){
-            console.log(JSON.stringify(result));
             // 添加服务器
             $('.server').remove();
             for(let server of result){
+                console.log(JSON.stringify(server))
                 let newServer = $('<button class=\"server\" data-server=\"' + server.id.toString() + '\">' + server.name + '</button>');
                 $('#serverList').append(newServer);
             }
@@ -119,7 +119,7 @@ $(document).ready(function (){
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: "http://127.0.0.1:8080/DiscordLike/server/create",
+            url: "/DiscordLike/server/create",
             contentType: "application/json",
             data: JSON.stringify(server),
             success: function (result){
@@ -157,11 +157,12 @@ $(document).ready(function (){
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: "http://127.0.0.1:8080/DiscordLike/server/join?serverId=" + serverId.toString(),
+            url: "/DiscordLike/server/join?serverId=" + serverId.toString(),
             contentType: "application/json",
             data: JSON.stringify(user),
             success: function (result){
                 alert("加入成功");
+                window.location.reload();
             },
             error: function (jqXHR){
                 var code = jqXHR.status;
@@ -170,6 +171,9 @@ $(document).ready(function (){
                 }
                 else if(code === 404){
                     alert("服务器不存在");
+                }
+                else if(code === 409){
+                    alert("你已经在该服务器了");
                 }
             }
         })

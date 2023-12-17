@@ -3,19 +3,20 @@ function refreshPage(userId, serverId){
     $.ajax({
         type: "POST",
         dataType: "json",
-        url: "http://127.0.0.1:8080/DiscordLike/server/getInfo?userId=" + userId.toString() + "&serverId=" + serverId.toString(),
+        url: "/DiscordLike/server/getInfo?userId=" + userId.toString() + "&serverId=" + serverId.toString(),
         contentType: "application/json",
         success: function (result){
+            console.log(JSON.stringify(result));
             // 侧边栏
             $('.channel').remove();
             // 文本频道
             for(let channel of result.textChannels){
-                let newChannel = $('<button class=\"channel\" data-textChannel=\"' + channel.id.toString() + '\">' + channel.name + '</button>');
+                let newChannel = $('<button class=\"channel\" data-textchannel=\"' + channel.id.toString() + '\">' + channel.name + '</button>');
                 $('#text-channel-list').append(newChannel);
             }
             // 语音频道
             for(let channel of result.audioChannels){
-                let newChannel = $('<button class=\"channel\" data-audioChannel=\"' + channel.id.toString() + '\">' + channel.name + '</button>');
+                let newChannel = $('<button class=\"channel\" data-audiochannel=\"' + channel.id.toString() + '\">' + channel.name + '</button>');
                 $('#audio-channel-list').append(newChannel);
             }
 
@@ -75,10 +76,6 @@ $(document).ready(function (){
         var channelName = $('#input-channelName').val();
         var channelDescription = $('#input-channelDescription').val();
         var channelType = $('input[name="channel-type"]:checked').val();
-        console.log(channelName);
-        console.log(channelDescription);
-        console.log(channelType);
-        console.log(serverId);
 
         if(!validateChannel(channelName, channelDescription)){
             return;
@@ -95,7 +92,7 @@ $(document).ready(function (){
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: "http://127.0.0.1:8080/DiscordLike/channel/create?type=" + channelType + "&serverId=" + serverId.toString(),
+            url: "/DiscordLike/channel/create?type=" + channelType + "&serverId=" + serverId.toString(),
             contentType: "application/json",
             data: JSON.stringify(channel),
             success: function (result){
@@ -132,7 +129,7 @@ $(document).ready(function (){
                 $.ajax({
                     type: "POST",
                     dataType: "json",
-                    url: "http://127.0.0.1:8080/DiscordLike/server/delete?serverId=" + serverId.toString(),
+                    url: "/DiscordLike/server/delete?serverId=" + serverId.toString(),
                     contentType: "application/json",
                     data: JSON.stringify({"id": userId}),
                     success: function (result){
@@ -158,4 +155,16 @@ $(document).ready(function (){
     $('#back-btn').click(function (){
         window.location.href = '../html/user.html';
     })
+
+    // 文本频道添加点击事件
+    $('#text-channel-list').on('click', '.channel', function() {
+        var channelId = $(this).data("textchannel");
+        $('#show-page').attr("src", "textChannel.html?id=" + channelId);
+    });
+
+    // 语音频道添加点击事件
+    $('#audio-channel-list').on('click', '.channel', function() {
+        var channelId = $(this).data('audiochannel');
+        $('#show-page').attr("src", "audioChannel.html?id=" + $(this).data("audioChannel"));
+    });
 });

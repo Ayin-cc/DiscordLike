@@ -84,7 +84,7 @@ $(document).ready(function (){
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: "http://127.0.0.1:8080/DiscordLike/user/getAuth",
+            url: "/DiscordLike/user/getAuth",
             contentType: "application/x-www-form-urlencoded",
             data: {"email": email},
             success: function (result){
@@ -132,7 +132,7 @@ $(document).ready(function (){
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: "http://127.0.0.1:8080/DiscordLike/user/register?authCode=" + authCode ,
+            url: "/DiscordLike/user/register?authCode=" + authCode ,
             contentType: "application/json",
             data: JSON.stringify(user),
             success: function (result){

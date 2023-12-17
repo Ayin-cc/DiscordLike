@@ -18,7 +18,7 @@ $(document).ready(function (){
            $.ajax({
                type: "POST",
                dataType: "json",
-               url: "http://127.0.0.1:8080/DiscordLike/user/delete",
+               url: "/DiscordLike/user/delete",
                contentType: "application/json",
                data: JSON.stringify(user),
                success: function (result){

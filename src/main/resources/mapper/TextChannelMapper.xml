@@ -4,6 +4,16 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.discordLike.mapper.TextChannelMapper">
+    <resultMap id="ownerRS" type="com.discordLike.entity.User">
+        <id property="id" column="user_id"/>
+        <result property="name" column="user_name"/>
+    </resultMap>
+    <resultMap id="channelRS" type="com.discordLike.entity.TextChannel">
+        <id property="id" column="id"/>
+        <result property="name" column="channel_name"/>
+        <result property="description" column="channel_description"/>
+        <association property="owner" resultMap="ownerRS"/>
+    </resultMap>
 
     <insert id="addChannel">
         insert into text_channel(channel_name, channel_owner, channel_description)
@@ -17,10 +27,23 @@
     <select id="getLastId" resultType="java.lang.Integer">
         select last_insert_id();
     </select>
+    <select id="getChannelById" resultMap="channelRS">
+        select text_channel.*, user.id as user_id, user.user_name from text_channel
+                                                                  left join user on user.id = text_channel.channel_owner
+        where text_channel.id = #{id};
+    </select>
     <select id="getAllMessageId" resultType="java.lang.Integer">
         select message_id from channel_message
         where channel_id = #{channelId};
     </select>
 
-
+    <delete id="deleteById">
+        delete from text_channel where id = #{id};
+    </delete>
+    <delete id="deleteHistoryOfId">
+        delete from channel_message where channel_id = #{id};
+    </delete>
+    <delete id="deleteChannelOfServer">
+        delete from server_channel where channel_id = #{id};
+    </delete>
 </mapper>

@@ -45,11 +45,42 @@ public class ChannelServiceImpl implements ChannelService {
         return id;
     }
 
+    @Override
+    public Channel getChannel(int id, boolean isTextChannel) {
+        try{
+            if (isTextChannel) {
+                return textChannelMapper.getChannelById(id);
+            } else {
+                return audioChannelMapper.getChannelById(id);
+            }
+        }catch (Exception e) {
+            return null;
+        }
+    }
+
     public List<Integer> historyMsgId(int channelId){
         try{
             return textChannelMapper.getAllMessageId(channelId);
         }catch (Exception e){
             return null;
         }
+    }
+
+    @Override
+    public int deleteChannel(int channelId, boolean isTextChannel){
+        //try{
+            if(isTextChannel){
+                textChannelMapper.deleteById(channelId);
+                textChannelMapper.deleteChannelOfServer(channelId);
+                textChannelMapper.deleteHistoryOfId(channelId);
+            }
+            else {
+                audioChannelMapper.deleteById(channelId);
+                audioChannelMapper.deleteChannelOfServer(channelId);
+            }
+            return 1;
+//        }catch (Exception e){
+//            return -1;
+//        }
     }
 }

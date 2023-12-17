@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Interface</title>
+    <link rel="stylesheet" href="../css/textChannel.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/textChannel.js"></script>
+</head>
+<body>
+<div class="header">
+    <div>
+        <span id="channel-name">Channel Name</span> -
+        <span>ID: <span id="channel-id">0</span></span> -
+        <span>创建者: <span id="channel-owner-name">null</span></span>
+    </div>
+    <button class="delete-button">Delete</button>
+</div>
+
+<div class="message-list" id="messageList">
+    <!-- Messages will be added here dynamically -->
+</div>
+
+<div class="footer">
+    <input type="text" id="messageInput" placeholder="输入消息...">
+    <button class="send-button" id="send-btn">Send</button>
+</div>
+
+</body>
+</html>
