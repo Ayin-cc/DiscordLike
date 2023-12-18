@@ -42,7 +42,7 @@ public class ChatSocketServer {
             this.userId = userId;
             this.cid = cid;
             sessionPool.computeIfAbsent(cid, k -> new ConcurrentHashMap<>()).put(userId, session);
-            log.info("【websocket消息】频道" + this.cid + "有新的连接，总数为:" + sessionPool.get(cid).size());
+            log.info("【WebSocket】频道" + this.cid + "有新的连接，总数为:" + sessionPool.get(cid).size());
 
             // 发送问候信息
             sendOneMessage(cid ,this.userId, JSON.toJSONString(Message.systemMessage("Hello")));
@@ -54,7 +54,7 @@ public class ChatSocketServer {
     public void onClose() {
         try {
             sessionPool.remove(this.userId);
-            log.info("【websocket消息】频道" + this.cid + "连接断开，总数为:" + (sessionPool.get(cid).size() - 1));
+            log.info("【WebSocket】频道" + this.cid + "连接断开，总数为:" + (sessionPool.get(cid).size() - 1));
         } catch (Exception e) {
         }
     }
@@ -63,7 +63,7 @@ public class ChatSocketServer {
     public void onMessage(String message) {
 
 
-        log.info("【websocket消息】频道" + this.cid + "收到客户端消息:" + message);
+        log.info("【WebSocket】频道" + this.cid + "收到客户端消息:" + message);
         JSONObject obj = JSONObject.parseObject(message);
         Message msg = JSON.toJavaObject(obj, com.discordLike.entity.Message.class);
         // 判断是聊天还是私聊
@@ -82,7 +82,7 @@ public class ChatSocketServer {
 
     // 广播消息
     public void sendAllMessage(String message) {
-        log.info("【websocket消息】频道" + this.cid + "广播消息:" + message);
+        log.info("【WebSocket】频道" + this.cid + "广播消息:" + message);
         Map<Integer, Session> online = sessionPool.get(this.cid);
         for(int id : online.keySet()) {
             Session session = online.get(id);
@@ -95,7 +95,7 @@ public class ChatSocketServer {
         Session session = sessionPool.get(cid).get(userId);
         if (session != null && session.isOpen()) {
             try {
-                log.info("【websocket消息】To用户" + userId + "单点消息:" + message);
+                log.info("【WebSocket】To用户" + userId + "单点消息:" + message);
                 session.getAsyncRemote().sendText(message);
             } catch (Exception e) {
                 e.printStackTrace();

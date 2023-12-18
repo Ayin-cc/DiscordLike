@@ -2,80 +2,26 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="DiscordLike:war exploded" />
+      <artifact name="DiscordLike:jar" />
+      <artifact name="DiscordLike:jar2" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3c0d78a-08c0-4cbe-b8e2-270820c407cb" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/css/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/css/register.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/css/server-info.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/css/server.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/css/textChannel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/css/user.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/html/audioChannel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/html/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/html/main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/html/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/html/server-info.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/html/server.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/html/textChannel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/html/user.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/js/jquery-3.7.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/js/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/js/register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/js/server-info.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/js/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/js/textChannel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/js/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/resources/avatar.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/resources/index.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HTML/DiscordLike/resources/server.png" afterDir="false" />
+    <list default="true" id="d3c0d78a-08c0-4cbe-b8e2-270820c407cb" name="更改" comment="日志提示">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/DiscordLike_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/DiscordLike_jar2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/DiscordLike.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/css/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/css/login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/css/register.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/css/server-info.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/css/server.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/css/user.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/html/audioChannel.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/html/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/html/main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/html/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/html/server-info.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/html/server.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/html/textChannel.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/html/user.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/js/jquery-3.7.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/js/login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/js/register.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/js/server-info.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/js/server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/js/user.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/resources/avatar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/resources/index.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/resources/server.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/DiscordLike/js/jquery-3.7.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/DiscordLike/js/jquery-3.7.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/component/ChatSocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/component/ChatSocketServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ChannelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ChannelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/ServerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/AudioChannelMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/AudioChannelMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/TextChannelMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/mapper/TextChannelMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/service/ChannelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/ChannelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/service/ChannelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/service/ChannelServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AudioChannelMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AudioChannelMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TextChannelMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TextChannelMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/discordLike/controller/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +48,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -146,7 +92,7 @@
     &quot;project.structure.last.edited&quot;: &quot;工件&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15722656&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
     &quot;show.run.dashboard.notification&quot;: &quot;false&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;3b1c9c1974c0ef3b3ad01515d8a28dc9&quot;
   },
@@ -287,9 +233,7 @@
       </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="DiscordLike:war exploded" />
-        </option>
+        <option name="BuildArtifacts" enabled="true" />
       </method>
     </configuration>
     <list>
@@ -351,6 +295,9 @@
       <workItem from="1702615900138" duration="448000" />
       <workItem from="1702734874583" duration="7848000" />
       <workItem from="1702791222366" duration="22341000" />
+      <workItem from="1702815383402" duration="7031000" />
+      <workItem from="1702823574275" duration="232000" />
+      <workItem from="1702877814891" duration="164000" />
     </task>
     <task id="LOCAL-00001" summary="创建项目">
       <created>1700731203157</created>
@@ -577,7 +524,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="dev" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -591,7 +538,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="建立基本架构以及配置文件" />
     <MESSAGE value="Dao层基础代码以及mapper文件" />
     <MESSAGE value="Entity Bean" />
     <MESSAGE value="Create README" />
@@ -616,7 +562,8 @@
     <MESSAGE value="用户和服务器删除接口实现" />
     <MESSAGE value="用户和服务器删除功能剩余部分实现" />
     <MESSAGE value="实现文本频道后端部分" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现文本频道后端部分" />
+    <MESSAGE value="日志提示" />
+    <option name="LAST_COMMIT_MESSAGE" value="日志提示" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -624,5 +571,9 @@
         <watch expression="context" language="JAVA" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
